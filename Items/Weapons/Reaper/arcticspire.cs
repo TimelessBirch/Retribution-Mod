@@ -8,22 +8,23 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Retribution.Projectiles.Minions;
+using Retribution.Projectiles;
 
 namespace Retribution.Items.Weapons.Reaper
 {
-	public class arcticspire : ReaperClass
+	public class ArcticSpire : ReaperClass
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Arctic Spire");
-			Tooltip.SetDefault("Ice cold to the touch");
+			DisplayName.SetDefault("ArcticSpire");
+			Tooltip.SetDefault("A powerful ice scythe.");
 		}
 
 		public override void SafeSetDefaults()
 		{
 			item.channel = true;
 			item.maxStack = 1;
-			item.damage = 34;
+			item.damage = 76;
 			item.width = 56;
 			item.height = 48;
 			item.useTime = 20;
@@ -52,18 +53,19 @@ namespace Retribution.Items.Weapons.Reaper
 				item.useTime = 20;
 				item.useAnimation = 20;
 				item.damage = 50;
-				item.crit = 20; 
+				item.crit = 20;
 				item.noMelee = true;
 				item.melee = false;
 				item.autoReuse = true;
 				item.UseSound = SoundID.Item1;
-				item.shoot = ModContent.ProjectileType<GlacialSpireproj>();
+				item.shoot = ModContent.ProjectileType<ArcticSpireproj>();
 				item.shootSpeed = 25f;
 
 				soulCost = 2;
-				
+
 			}
-			else {
+			else
+			{
 				item.useStyle = ItemUseStyleID.SwingThrow;
 				item.useTime = 20;
 				item.useAnimation = 20;

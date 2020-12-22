@@ -18,7 +18,7 @@ namespace Retribution.Projectiles
 		public override void SetDefaults()
 		{  		
 			projectile.width = 2;
--			projectile.height = 12;
+			projectile.height = 12;
 			projectile.aiStyle = 0;
 			projectile.friendly = true;
 			projectile.ranged = true;
@@ -26,7 +26,6 @@ namespace Retribution.Projectiles
 			projectile.tileCollide = true;
 			projectile.penetrate = -1;
 			aiType = 5;
-
 		}
 
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)

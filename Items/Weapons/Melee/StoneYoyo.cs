@@ -40,7 +40,8 @@ namespace Retribution.Items.Weapons.Melee
 		// These are the ones that reduce damage of a melee weapon
 		private static readonly int[] unwantedPrefixes = new int[] { PrefixID.Terrible, PrefixID.Dull, PrefixID.Shameful, PrefixID.Annoying, PrefixID.Broken, PrefixID.Damaged, PrefixID.Shoddy};
 
-		public override bool AllowPrefix(int pre) {
+		public override bool AllowPrefix(int pre) 
+		{
 			// return false to make the game reroll the prefix
 
 			// DON'T DO THIS BY ITSELF:
@@ -56,10 +57,11 @@ namespace Retribution.Items.Weapons.Melee
 			return true;
 		}
 
-		public override void AddRecipes() {
+		public override void AddRecipes() 
+		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.WoodYoyo);
-            recipe.AddIngredient(ItemsID.StoneBlock, 20);
+            recipe.AddIngredient(ItemID.StoneBlock, 20);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

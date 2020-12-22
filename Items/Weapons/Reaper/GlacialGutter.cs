@@ -8,6 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Retribution.Projectiles.Minions;
+using Retribution.Projectiles;
 
 namespace Retribution.Items.Weapons.Reaper
 {

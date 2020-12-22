@@ -3,19 +3,22 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Retribution.Projectiles;
 
 namespace Retribution.Items.Weapons.Melee
 {
 	public class WaxWhiz : ModItem
 	{
-		public override void SetStaticDefaults() {
+		public override void SetStaticDefaults() 
+		{
 
 			ItemID.Sets.Yoyo[item.type] = true;
 			ItemID.Sets.GamepadExtraRange[item.type] = 15;
 			ItemID.Sets.GamepadSmartQuickReach[item.type] = true;
 		}
 
-		public override void SetDefaults() {
+		public override void SetDefaults() 
+		{
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.width = 24;
 			item.height = 24;
@@ -33,14 +36,15 @@ namespace Retribution.Items.Weapons.Melee
 
 			item.UseSound = SoundID.Item1;
 			item.value = Item.sellPrice(silver: 1);
-			item.shoot = ModContent.ProjectileType<WazWhizProjectile>();
+			item.shoot = ModContent.ProjectileType<WaxWhizProjectile>();
 		}
 
 		// Make sure that your item can even receive these prefixes (check the vanilla wiki on prefixes)
 		// These are the ones that reduce damage of a melee weapon
 		private static readonly int[] unwantedPrefixes = new int[] { PrefixID.Terrible, PrefixID.Dull, PrefixID.Shameful, PrefixID.Annoying, PrefixID.Broken, PrefixID.Damaged, PrefixID.Shoddy};
 
-		public override bool AllowPrefix(int pre) {
+		public override bool AllowPrefix(int pre) 
+		{
 			// return false to make the game reroll the prefix
 
 			// DON'T DO THIS BY ITSELF:
@@ -56,10 +60,11 @@ namespace Retribution.Items.Weapons.Melee
 			return true;
 		}
 
-		public override void AddRecipes() {
+		public override void AddRecipes() 
+		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.WoodYoyo);
-            recipe.AddIngredient(ItemsID.StoneBlock, 20);
+            recipe.AddIngredient(ItemID.StoneBlock, 20);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

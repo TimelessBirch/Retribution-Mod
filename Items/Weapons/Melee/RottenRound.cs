@@ -8,7 +8,7 @@ namespace Retribution.Items.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			Displayname.SetDefault("RottenRound");
+			DisplayName.SetDefault("RottenRound");
 		}
 
 		public override void SetDefaults()

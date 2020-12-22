@@ -7,7 +7,6 @@ namespace Retribution.Projectiles
 {
 	public class Sabretooth : ModProjectile
 	{
-
 		public override void SetDefaults()
 		{
 			projectile.width = 38;
@@ -17,15 +16,15 @@ namespace Retribution.Projectiles
 			projectile.tileCollide = true;
 			projectile.timeLeft = 5;
 			projectile.penetrate = -1;
-            projectile.CloneDefaults(ProjectileID.LightDisc);
+			projectile.CloneDefaults(ProjectileID.LightDisc);
 		}
-	}
-}       public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
-        {
-            if(player.altFunctionUse == 1)
+
+		public void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		{
+			if (player.altFunctionUse == 1)
 			{
 				target.AddBuff(BuffID.Ichor, 50);
-	
+			}
 		}
-    
 	}
+}

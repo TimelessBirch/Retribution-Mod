@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TerraHeartsTest.Items.Weapons
+namespace Retribution.Items.Weapons.Melee
 {
 	public class Sirius : ModItem
 	{
@@ -31,9 +31,9 @@ namespace TerraHeartsTest.Items.Weapons
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.FallingStar, 10);
+			recipe.AddIngredient(ItemID.FallenStar, 10);
             recipe.AddIngredient(ItemID.HallowedBar, 15);
-            recipe.AddIngredient(ItemsID.SoulOfLight, 5);
+            recipe.AddIngredient(ItemID.SoulofLight, 5);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
@@ -69,11 +69,7 @@ namespace TerraHeartsTest.Items.Weapons
             if(player.altFunctionUse == 2)
 			{
 				target.AddBuff(BuffID.OnFire, 50);
-
+			}
 		}
-
-		
-    
-	}
 	}
 }

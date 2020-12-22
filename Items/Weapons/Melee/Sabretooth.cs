@@ -8,7 +8,7 @@ namespace Retribution.Items.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			Displayname.SetDefault("Sabretooth");
+			DisplayName.SetDefault("Sabretooth");
 		}
 
 		public override void SetDefaults()
@@ -36,7 +36,7 @@ namespace Retribution.Items.Weapons.Melee
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.TissueSample, 10);
 			recipe.AddIngredient(ItemID.CrimtaneBar, 8);
-            recipe.AddIngredient(ItemID.Vertebra, 4);
+            recipe.AddIngredient(ItemID.Vertebrae, 4);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -4,16 +4,18 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Retribution.Items.Weapons
+namespace Retribution.Items.Weapons.Mage
 {
 	public class WaspWand : ModItem
 	{
-		public override void SetStaticDefaults() {
+		public override void SetStaticDefaults()
+		{
 			Tooltip.SetDefault("Not the bees!");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
-		public override void SetDefaults() {
+		public override void SetDefaults() 
+		{
 			item.damage = 27;
 			item.magic = true;
 			item.mana = 15;
@@ -32,9 +34,10 @@ namespace Retribution.Items.Weapons
 			item.shootSpeed = 16f;
 		}
 
-		public override void AddRecipes() {
+		public override void AddRecipes() 
+		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<BeeWax>(), 10);
+			recipe.AddIngredient(ItemID.BeeWax, 10);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
