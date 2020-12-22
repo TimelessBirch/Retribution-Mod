@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 
 namespace Retribution.Projectiles
 {
-	public class ArcticSpireproj : ModProjectile
+	public class arcticspireproj : ModProjectile
 	{
         public override void SetDefaults()
 		{
